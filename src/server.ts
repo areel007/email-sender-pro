@@ -7,6 +7,8 @@ import { transporter } from "./mailer";
 
 const app = express();
 
+app.set("trust proxy", 1);
+
 app.use(cors());
 app.use(express.json({ limit: "10kb" }));
 
